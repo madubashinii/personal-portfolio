@@ -25,8 +25,8 @@ function Home() {
                     </div>
 
                     <p className="bio">
-                        Hi, I'm a Software Engineering undergraduate with a strong passion for full-stack web development.
-                        This website serves as a space to share my ongoing journey, the projects I've worked on, and the knowledge I've acquired.
+                        Hi, I am a Software Engineering undergraduate with a strong passion for full-stack web development.
+                        This website serves as a space to share my ongoing journey, the projects I have worked on, and the knowledge I have acquired.
                     </p>
 
                     <div className="cta-buttons">
