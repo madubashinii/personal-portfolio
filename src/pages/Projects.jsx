@@ -35,7 +35,7 @@ function Projects() {
     return (
         <section id="projects" className="projects-section">
             <div className="header">
-                <h1>My Projects</h1>
+                <h1>Featured Projects</h1>
             </div>
 
             <div className="projects-grid">
@@ -58,8 +58,25 @@ function Projects() {
                     </div>
                 ))}
             </div>
+
+            <div className="see-all-container">
+                <a href="/all-projects" className="see-all-button">
+                    See All Projects
+                </a>
+            </div>
         </section>
     );
 }
 
+
 export default Projects;
+
+
+
+
+
+
+
+
+
+

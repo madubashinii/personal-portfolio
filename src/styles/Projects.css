@@ -2,6 +2,8 @@
     padding: 4rem 2rem;
     text-align: center;
     min-height: 100vh;
+    background-color: rgba(0, 153, 204, 0.12);
+    color: #cfdce6;
 }
 
 .projects-grid {
@@ -11,7 +13,7 @@
 }
 
 .project-card {
-    background: #2a2a2a;
+    background: rgba(42, 42, 42, 0.9);
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -69,4 +71,46 @@
 .icon {
     margin-right: 8px;
     font-size: 1.1rem;
+}
+
+
+
+
+.see-all-button {
+    background-color: #0077b6;
+    color: #ffffff;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 119, 182, 0.3);
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.see-all-button:hover,
+.see-all-button:focus {
+    background-color: #005f86;
+    box-shadow: 0 8px 16px rgba(0, 95, 134, 0.4);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.see-all-button:active {
+    background-color: #004f6e;
+    box-shadow: 0 4px 8px rgba(0, 79, 110, 0.4);
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .see-all-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin-top: 3rem;
+    }
 }
