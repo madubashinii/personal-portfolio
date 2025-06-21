@@ -1,7 +1,8 @@
 .contact-page {
     padding: 4rem 2rem;
     min-height: 100vh;
-    color: #f1f5f9;
+    color: #e0e6f0;
+    background: linear-gradient(to right, #0a2435, #0d293d);
 }
 
 .content {
@@ -17,8 +18,8 @@
 .contact-form {
     flex: 1;
     min-width: 300px;
-    background-color: #161b22;
-    border: 1px solid #2c313a;
+    background: linear-gradient(to bottom right, #111827, #1f2937);
+    border: 1px solid #2d3748;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     padding: 35px;
     border-radius: 12px;
@@ -30,16 +31,34 @@
     line-height: 1.8;
 }
 
+.contact-info h2 {
+    font-size: 1.6rem;
+    /* color: #127cd9; */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 0;
+}
+
 .contact-info ul {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
     padding: 0;
+    margin: 0;
 }
 
 .contact-info ul li {
     display: flex;
     align-items: center;
-    margin-bottom: 18px;
-    font-size: 1rem;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #e2e8f0;
 }
 
 .contact-info a {
@@ -86,7 +105,6 @@ textarea {
     font-size: 1rem;
     border: 1px solid #3b4252;
     border-radius: 8px;
-    background-color: #0d1117;
     color: #f1f5f9;
     transition: border 0.3s, box-shadow 0.3s;
 }

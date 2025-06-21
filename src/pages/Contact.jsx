@@ -48,16 +48,18 @@ function Contact() {
 
         <div className="contact-page" id='contact'>
             <div className="header">
-                <h1>Contact</h1>
+                <h1>Let's Connect</h1>
             </div>
 
             <div className="content">
                 <div className="contact-info">
-                    <p>
-                        <b>Let's Collaborate</b> <br />
-                        If you're interested in working together on a project, feel free to reach out.
-                        I'm always open to new opportunities and collaborations.
+
+
+                    <h2>Get in Touch</h2>
+                    <p className="contact-info-description">
+                        I'm open to internship opportunities, collaborations, or just a friendly tech chat. Feel free to reach out!
                     </p>
+
                     <ul>
                         <li>
                             <span className="icon-circle">
