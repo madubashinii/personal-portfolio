@@ -137,7 +137,6 @@ textarea::placeholder {
     background: #1f6feb;
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
     .content {
         flex-direction: column;

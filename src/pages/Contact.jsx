@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Contact() {
@@ -8,6 +10,7 @@ function Contact() {
         name: "",
         email: "",
         message: "",
+        honeypot: "",
     });
 
     const handleChange = (e) => {
@@ -21,28 +24,48 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            const form = e.target;
+        const toastId = toast.loading('Sending message...');
 
-            // Add the action URL to the form
-            const response = await fetch(form.action, {
+        try {
+            const response = await fetch('http://localhost:5000/api/contact', {
                 method: 'POST',
-                body: new FormData(form),
                 headers: {
-                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
                 },
+                body: JSON.stringify(formData),
             });
 
             if (response.ok) {
-                console.log('Form data submitted successfully!');
+                toast.update(toastId, {
+                    render: 'Message sent successfully!',
+                    type: 'success',
+                    isLoading: false,
+                    autoClose: 3000,
+                    closeOnClick: true,
+                });
                 setFormData({ name: '', email: '', message: '' });
             } else {
-                console.error('Failed to submit data');
+                toast.update(toastId, {
+                    render: 'Failed to send message. Please try again.',
+                    type: 'error',
+                    isLoading: false,
+                    autoClose: 3000,
+                    closeOnClick: true,
+                });
             }
         } catch (error) {
+            toast.update(toastId, {
+                render: 'Error occurred while sending message.',
+                type: 'error',
+                isLoading: false,
+                autoClose: 3000,
+                closeOnClick: true,
+            });
             console.error('Error:', error);
         }
     };
+
+
 
     return (
 
@@ -65,24 +88,24 @@ function Contact() {
                             <span className="icon-circle">
                                 <FiMail />
                             </span>
-                            <a href="mailto:email@example.com">email@example.com</a>
+                            <a href="mailto:madu.bashini7520@gmail.com">madu.bashini7520@gmail.com</a>
                         </li>
                         <li>
                             <span className="icon-circle">
                                 <FiPhone />
                             </span>
-                            <a href="tel:+1234567890">+1 234 567 890</a>
+                            <a href="tel:+94 729247022">+94 729247022</a>
                         </li>
                         <li>
                             <span className="icon-circle">
                                 <FiMapPin />
                             </span>
                             <a
-                                href="https://www.google.com/maps/place/123+Main+Street,+City,+Country"
+                                href="https://www.google.com/maps"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                123 Main Street, City, Country
+                                Southern Province, Sri Lanka
                             </a>
                         </li>
 
@@ -93,6 +116,18 @@ function Contact() {
 
                 <div className="contact-form">
                     <form onSubmit={handleSubmit}>
+
+                        <input
+                            type="text"
+                            name="honeypot"
+                            value={formData.honeypot}
+                            onChange={handleChange}
+                            style={{ display: "none" }}
+                            autoComplete="off"
+                            tabIndex="-1"
+                        />
+
+
                         <div className="form-group">
                             <label>Name</label>
                             <input
@@ -130,8 +165,23 @@ function Contact() {
                     </form>
                 </div>
             </div>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
+
+
         </div>
     );
 }
 
 export default Contact;
+

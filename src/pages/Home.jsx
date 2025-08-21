@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import '../styles/Home.css';
-import project1Image from '../assets/project1.png';
+import project1Image from '../assets/porfolioImg.jpeg';
 
 function Home() {
     const location = useLocation();
@@ -25,8 +25,8 @@ function Home() {
                     </div>
 
                     <p className="bio">
-                        Hi, I am a Software Engineering undergraduate with a strong passion for full-stack web development.
-                        This website serves as a space to share my ongoing journey, the projects I have worked on, and the knowledge I have acquired.
+                        Hi, I am a Software Engineering undergraduate with a strong passion for<br></br> full-stack web development.
+                        This website serves as a space to share my <br></br>ongoing journey, the projects I have worked on, and the knowledge I have acquired.
                     </p>
 
                     <div className="cta-buttons">
@@ -35,23 +35,20 @@ function Home() {
                     </div>
 
                     <div className="social-icons">
-                        <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/madubashinii" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/nilakshi-madubashini/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-twitter"></i>
                         </a>
                     </div>
                 </div>
 
                 <div className="home-image">
-                    <div className="image-container">
-                        <img src={project1Image} alt="Nilakshi Madubashini" />
-                        <div className="image-backdrop"></div>
-                        <div className="decoration-circle"></div>
+                    <div className="image-outer-circle">
+                        <div className="image-inner-circle">
+                            <img src={project1Image} alt="Nilakshi Madubashini" />
+                        </div>
                     </div>
                 </div>
             </div>

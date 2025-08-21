@@ -165,7 +165,7 @@
   }
 }
 
-/* Responsive for mobile */
+
 @media (max-width: 600px) {
   .skills-grid.no-scroll {
     grid-template-columns: repeat(2, 1fr);
