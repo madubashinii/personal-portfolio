@@ -26,7 +26,7 @@ const projectList = [
         title: 'Boutique - Hotel Management System ',
         description: 'A full-stack hotel booking system',
         tools: 'Java, JSP, Servlets, HTML, CSS, JS, MySQL, Apache Tomcat',
-        codeLink: 'https://github.com/madubashinii',
+        codeLink: 'https://github.com/madubashinii/Boutique',
         demoLink: 'https://yourliveprojectdemo.com',
         image: project1Image,
     },
