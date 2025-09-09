@@ -6,13 +6,13 @@ A modern, responsive portfolio website built with **React.js** to showcase my **
 
 ## 🌟 Features
 
-- ⚡ Fully responsive
-- 🎨 Dark-themed, clean UI  
-- 📱 Mobile-friendly navigation with a hamburger menu  
-- 🧠 Skills section with icons, categories, and tags  
-- 📂 Projects showcase with live links and GitHub repositories  
-- 📞 Contact section with **Node.js & Express** backend for form submissions  
-- 🔗 Smooth scrolling between sections  
+- Fully responsive
+- Dark-themed, clean UI  
+- Mobile-friendly navigation with a hamburger menu  
+- Skills section with icons, categories, and tags  
+- Projects showcase with live links and GitHub repositories  
+- Contact section with **Node.js & Express** backend for form submissions  
+- Smooth scrolling between sections  
 
 ---
 
